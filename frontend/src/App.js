@@ -40,8 +40,8 @@ class App extends React.Component{
     })
   }
 
-  getContacts = () => {
-      fetch("http://localhost:3000/api/v1/contacts",
+  getPaintings = () => {
+      fetch("http://localhost:3000/api/v1/paintings",
       {
         method: "GET",
         headers: {
@@ -59,7 +59,7 @@ class App extends React.Component{
       <BrowserRouter>
     <div>
         <Header/>
-        <button onClick={this.getContacts}>Show Contacts</button>
+        <button onClick={this.getPaintings}>Show Contacts</button>
         <Switch>
 
         <Route path="/login" component={Login} />
