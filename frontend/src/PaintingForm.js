@@ -2,10 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 
-class PaintingForm extends React.Component{
+class FriendForm extends React.Component{
 
     goHome = () => {
-        this.props.history.push("/paintings")
+        this.props.history.push("/friends")
     }
 
     render(){
@@ -15,16 +15,16 @@ class PaintingForm extends React.Component{
                 this.props.add(e)
                 this.goHome()
                 }}>
-                <input type='text' placeholder='Painting Title'/>
-                <input type='text' placeholder='Painting Image URL'/>
+                <input type='text' placeholder='Friend Name'/>
+                <input type='text' placeholder='Friend Image URL'/>
                 <input type='text' placeholder='Artist Name'/>
-                <input type='submit' value='Add Painting'/>
+                <input type='submit' value='Add Friend'/>
             </form>
-            <Link to="/paintings">
+            <Link to="/contacts">
                 HOME
             </Link>
         </div>
     )}
 }
 
-export default PaintingForm
+export default FriendForm

@@ -1,9 +1,9 @@
 import React from 'react';
-import paintings from './painting'
+import contacts from './contact'
 import 'semantic-ui-css/semantic.min.css';
-import NavBar from './NavBar'
-import PaintingList from './PaintingList'
-import PaintingForm from './PaintingForm'
+import Header from './Header'
+import FriendList from './FriendList'
+// import FriendForm from './FriendForm'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Login from './Login'
 import SignUp from './SignUp'
@@ -18,7 +18,7 @@ class App extends React.Component{
       testNew: "testnew",
       test: "test",
       form: false,
-      paintings: []
+      contacts: []
     }
   }
 
@@ -40,8 +40,8 @@ class App extends React.Component{
     })
   }
 
-  getPaintings = () => {
-      fetch("http://localhost:3000/api/v1/paintings",
+  getContacts = () => {
+      fetch("http://localhost:3000/api/v1/contacts",
       {
         method: "GET",
         headers: {
@@ -58,17 +58,17 @@ class App extends React.Component{
    
       <BrowserRouter>
     <div>
-        <NavBar />
-        <button onClick={this.getPaintings}>Show Paintings</button>
+        <Header/>
+        <button onClick={this.getContacts}>Show Contacts</button>
         <Switch>
 
         <Route path="/login" component={Login} />
 
         <Route path="/signup" component={SignUp} />
 
-        <Route path="/paintings/new" render = {(routeProps) =><PaintingForm {...routeProps} add={this.addPainting} /> } />
+        {/* <Route path="/paintings/new" render = {(routeProps) =><AddForm {...routeProps} add={this.addContact} /> } /> */}
 
-        <Route path="/paintings" render={() => <PaintingList paintingObjs={this.state.paintings} />}/>
+        <Route path="/paintings" render={() => <FriendList contactObjs={this.state.contacts} />}/>
     
         </Switch>
         
