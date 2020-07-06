@@ -9,7 +9,7 @@ class Api::V1::UsersController < ApplicationController
       user.save
       render json: {user: UserSerializer.new(user)}, status: :created
     else
-      render json: {error: "Failed to create a user"}, status: :not_acceptable
+      render json: {error: "Failed to create a user. Please try again"}, status: :not_acceptable
     end
   end
 

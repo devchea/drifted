@@ -5470,3 +5470,664 @@ Filter chain halted as :logged_in? rendered or redirected
 Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:35:46 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:35:47 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:35:47 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:36:17 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:36:17 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:36:26 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:36:27 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:36:27 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:36:27 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:36:28 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users" for ::1 at 2020-07-06 08:37:57 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::UsersController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/users" for ::1 at 2020-07-06 08:39:45 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::UsersController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/v1/users" for ::1 at 2020-07-06 08:42:35 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"123", "password"=>"[FILTERED]", "user"=>{"username"=>"123"}}
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[36mUser Create (6.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "123"], ["password_digest", "$2a$12$SgtAEMU.sFDGW0aGyss1JOETYDAim12SNVXDUqLS9L1/V6x9zClz."], ["created_at", "2020-07-06 15:42:36.162026"], ["updated_at", "2020-07-06 15:42:36.162026"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.79ms)
+Completed 201 Created in 305ms (Views: 5.2ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:42:42 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:42:58 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:42:59 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:43:00 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:43:00 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:43:00 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:43:00 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 08:43:31 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"1234", "password"=>"[FILTERED]", "user"=>{"username"=>"1234"}}
+Unpermitted parameter: :user
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "1234"], ["password_digest", "$2a$12$fDYuO.4DPGB2guuqSINYIO7TZenmwyu6cbpKHWrUCJrx8ZnJ/Ldsq"], ["created_at", "2020-07-06 15:43:32.260242"], ["updated_at", "2020-07-06 15:43:32.260242"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 201 Created in 326ms (Views: 0.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:43:40 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:44:20 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:44:20 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:44:21 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:44:47 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:44:48 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:44:48 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 08:44:48 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-06 08:54:47 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 08:56:12 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "richard"], ["password_digest", "$2a$12$ab85mEZixlz11bd9eTjtb.8bUa14CtKRiZRFSGU4ypCzZjRSa/hEu"], ["created_at", "2020-07-06 15:56:12.989448"], ["updated_at", "2020-07-06 15:56:12.989448"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 201 Created in 309ms (Views: 0.5ms | ActiveRecord: 7.1ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:01:07 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "richard"], ["password_digest", "$2a$12$izP3LhXwg.6ey.W0UfyrqehKOS1JHnmTEL.PIWbduSYKviz7hXRu2"], ["created_at", "2020-07-06 16:01:08.092658"], ["updated_at", "2020-07-06 16:01:08.092658"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 201 Created in 301ms (Views: 0.5ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-06 09:01:13 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-06 09:01:14 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-06 09:01:14 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:06:43 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard5", "password"=>"[FILTERED]", "user"=>{"username"=>"richard5"}}
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "richard5"], ["password_digest", "$2a$12$8B3YVhDMHoWJ03VAdiNVaOG.u7sLH2kNGTDIZIIHrTS3qq5KiDOwG"], ["created_at", "2020-07-06 16:06:44.224786"], ["updated_at", "2020-07-06 16:06:44.224786"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 201 Created in 338ms (Views: 0.5ms | ActiveRecord: 6.7ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:07:35 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"12345", "password"=>"[FILTERED]", "user"=>{"username"=>"12345"}}
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "12345"], ["password_digest", "$2a$12$ehkM2/H8EDdzPe5jPFxuCOiN7Z0XDlC7WFhmMB0W/5PRpfB8BFHZS"], ["created_at", "2020-07-06 16:07:36.119948"], ["updated_at", "2020-07-06 16:07:36.119948"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 201 Created in 315ms (Views: 0.6ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-06 09:13:00 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"123", "password"=>"[FILTERED]", "auth"=>{"username"=>"123", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 356ms (Views: 0.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-06 09:13:23 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"123", "password"=>"[FILTERED]", "auth"=>{"username"=>"123", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "123"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 302ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 09:13:51 -0700
+Processing by Api::V1::PaintingsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+  [1m[36mPainting Load (1.4ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  ↳ app/controllers/api/v1/paintings_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 32ms (Views: 7.7ms | ActiveRecord: 11.9ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:18:29 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+Completed 500 Internal Server Error in 298ms (ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `user_name' for #<User:0x00007f923b284d38>
+Did you mean?  username
+               username?
+               username=):
+  
+app/controllers/api/v1/users_controller.rb:8:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:19:16 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_name' for #<User:0x00007f923da263c8>
+Did you mean?  username
+               username?
+               username=):
+  
+app/controllers/api/v1/users_controller.rb:8:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:19:35 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard10", "password"=>"[FILTERED]", "user"=>{"username"=>"richard10"}}
+Unpermitted parameter: :user
+Completed 500 Internal Server Error in 298ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_name' for #<User:0x00007f923c1d3d70>
+Did you mean?  username
+               username?
+               username=):
+  
+app/controllers/api/v1/users_controller.rb:8:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:19:50 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_name' for #<User:0x00007f923a2a6b00>
+Did you mean?  username
+               username?
+               username=):
+  
+app/controllers/api/v1/users_controller.rb:8:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:20:06 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"asdf", "password"=>"[FILTERED]", "user"=>{"username"=>"asdf"}}
+Unpermitted parameter: :user
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_name' for #<User:0x00007f923a877160>
+Did you mean?  username
+               username?
+               username=):
+  
+app/controllers/api/v1/users_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (2.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:20:34 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"asdf", "password"=>"[FILTERED]", "user"=>{"username"=>"asdf"}}
+Unpermitted parameter: :user
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `user_name' for #<User:0x00007f923b2a6140>
+Did you mean?  username
+               username?
+               username=):
+  
+app/controllers/api/v1/users_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:21:36 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 6.3ms)
+
+
+  
+NoMethodError (undefined method `user_name' for #<User:0x00007fe0350d6638>
+Did you mean?  username
+               username?
+               username=):
+  
+app/controllers/api/v1/users_controller.rb:8:in `create'
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:22:23 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "richard"], ["password_digest", "$2a$12$F2EnaK4uibXCRezJs55Xreou4IjA4JZnKlPbIjcDhnoGDWPdeMrZ6"], ["created_at", "2020-07-06 16:22:23.583917"], ["updated_at", "2020-07-06 16:22:23.583917"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (7.59ms)
+Completed 201 Created in 345ms (Views: 16.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 09:22:55 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 09:22:56 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-06 09:24:09 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "auth"=>{"username"=>"richard", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "richard"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 329ms (Views: 1.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 09:24:13 -0700
+Processing by Api::V1::PaintingsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+  [1m[36mPainting Load (0.6ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  ↳ app/controllers/api/v1/paintings_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 19ms (Views: 8.8ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:24:57 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "richard"], ["password_digest", "$2a$12$DDlN/xr4fInV8Nlwv9bogu2Af4ueRQNxfE4N1XMZCFyXqaSp9ETsW"], ["created_at", "2020-07-06 16:24:57.541308"], ["updated_at", "2020-07-06 16:24:57.541308"]]
+  ↳ app/controllers/api/v1/users_controller.rb:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 201 Created in 302ms (Views: 0.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/v1/paintings" for ::1 at 2020-07-06 09:25:05 -0700
+Processing by Api::V1::PaintingsController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:27:41 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "richard"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 1710ms (Views: 3.8ms | ActiveRecord: 17.4ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:28:09 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "richard"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 325ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:33:03 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "richard"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 406 Not Acceptable in 321ms (Views: 5.8ms | ActiveRecord: 9.2ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:39:33 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "richard"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 327ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2020-07-06 09:40:36 -0700
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"username"=>"richard", "password"=>"[FILTERED]", "user"=>{"username"=>"richard"}}
+Unpermitted parameter: :user
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "richard"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 406 Not Acceptable in 300ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
