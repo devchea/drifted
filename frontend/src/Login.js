@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -35,8 +35,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 export default function SignIn() {
   const classes = useStyles();
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    fetch("http://localhost:3000/api/v1/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password
+      })
+    })
+      .then(res => res.json())
+      .then(userInfo => {
+        console.log(userInfo)
+        localStorage.token = userInfo.token
+      })
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -48,7 +71,7 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} onSubmit={handleSubmit}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -56,20 +79,21 @@ export default function SignIn() {
             fullWidth
             id="username"
             label="Username"
-            name="username"
-            autoComplete="username"
-            autoFocus
+            input name="username"
+            onChange={(e) => setUsername(e.target.value)}
+
           />
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
-            name="password"
+            input name="password"
             label="Password"
             type="password"
             id="password"
-            autoComplete="current-password"
+            onChange={(e) => setPassword(e.target.value)}
+
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -85,13 +109,8 @@ export default function SignIn() {
             Sign In
           </Button>
           <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="./SignUp" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
