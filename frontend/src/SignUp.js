@@ -57,7 +57,8 @@ export default function SignUp() {
       .then(res => res.json())
       .then(userInfo => {
         setError(userInfo)
-        console.log(errors)
+        // console.log('errors',errors)
+        // console.log('userinfo', userInfo)
       })
 
 
