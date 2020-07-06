@@ -2,15 +2,19 @@ import React from "react"
 import FriendCard from "./FriendCard"
 
 function FriendList(props){
-    console.log(props.contactObjs)
-    return(<div>
-       { localStorage.token
-       ? props.contactObjs.map(friend => {
-            return <FriendCard friend={friend} key={friend.id}/>
-        })
-        : <h4> Please Log In to see your contacts</h4>
-    }    
-    </div>)
+
+    return(
+        <div> {
+            props.friendObjs.map(friend => {
+                return (
+                <div> 
+                    {friend.name, friend.phone, friend.email, friend.appointment.next_appointment}
+                </div>
+                )
+            }
+            )
+         }</div>
+    )
 }
 
 export default FriendList

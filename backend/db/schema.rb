@@ -10,14 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_29_004749) do
+ActiveRecord::Schema.define(version: 3) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "paintings", force: :cascade do |t|
-    t.string "title"
-    t.string "image"
+  create_table "appointments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "friend_id"
+    t.date "next_appointment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "friends", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.string "email"
+    t.integer "recurrence_integer"
+    t.string "recurrence_unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,7 +38,6 @@ ActiveRecord::Schema.define(version: 2018_08_29_004749) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "bio", default: "I love flavortown, USA"
   end
 
 end
