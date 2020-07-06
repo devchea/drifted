@@ -1,12 +1,15 @@
 import React from 'react';
-import contacts from './contact'
+import friends from './friend'
 import 'semantic-ui-css/semantic.min.css';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from './Header'
 import FriendList from './FriendList'
 // import FriendForm from './FriendForm'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Login from './Login'
 import SignUp from './SignUp'
+import Dashboard from './Dashboard';
 
 
 
@@ -18,30 +21,28 @@ class App extends React.Component{
       testNew: "testnew",
       test: "test",
       form: false,
-      contacts: []
+      friends: []
     }
   }
 
-  addPainting = (e) => {
+  addFriend = (e) => {
     e.preventDefault()
   
-    let newPainting = {
-      title: e.target[0].value,
-      image: e.target[1].value,
-      artist: {
-        name: e.target[2].value
-      }
+    let newFriend = {
+      name: e.target[0].value,
+      phone: e.target[1].value,
+      email: e.target[2].value
     }
 
-    let newArr = [...this.state.paintings, newPainting]
+    let newArr = [...this.state.friends, newFriend]
 
     this.setState({
-      paintings: newArr
+      friends: newArr
     })
   }
 
-  getPaintings = () => {
-      fetch("http://localhost:3000/api/v1/paintings",
+  getFriends = () => {
+      fetch("http://localhost:3000/api/v1/friends",
       {
         method: "GET",
         headers: {
@@ -57,18 +58,22 @@ class App extends React.Component{
     return (
    
       <BrowserRouter>
-    <div>
+      <div>
+        < CssBaseline />
         <Header/>
-        <button onClick={this.getPaintings}>Show Contacts</button>
+        <Button onClick={this.getFriends}>Show Friends</Button>
         <Switch>
 
-        <Route path="/login" component={Login} />
+        <Route path="/login" component={(routerProps)=><Login {...routerProps} />} />
 
         <Route path="/signup" component={SignUp} />
+        <Route path="/dashboard" component={Dashboard} />
+
+
 
         {/* <Route path="/paintings/new" render = {(routeProps) =><AddForm {...routeProps} add={this.addContact} /> } /> */}
 
-        <Route path="/paintings" render={() => <FriendList contactObjs={this.state.contacts} />}/>
+        <Route path="/friends" render={() => <FriendList friendObjs={this.state.friends} />}/>
     
         </Switch>
         
