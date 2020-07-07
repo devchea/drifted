@@ -50,11 +50,14 @@ class App extends React.Component{
         }
       })
       .then(res => res.json())
-      .then(console.log)
+      .then(data => {
+        this.setState({
+          friends: data
+        })
+      })
   }
 
   render(){
-
     return (
    
       <BrowserRouter>
@@ -67,13 +70,16 @@ class App extends React.Component{
         <Route path="/login" component={(routerProps)=><Login {...routerProps} />} />
 
         <Route path="/signup" component={SignUp} />
-        <Route path="/dashboard" component={Dashboard} />
+        {/* <Route path="/dashboard" component={Dashboard} /> */}
 
 
 
         {/* <Route path="/paintings/new" render = {(routeProps) =><AddForm {...routeProps} add={this.addContact} /> } /> */}
 
-        <Route path="/friends" render={() => <FriendList friendObjs={this.state.friends} />}/>
+        {/* <Route path="/friends" render={() => <FriendList friendObjs={this.state.friends} />}/> */}
+        <Dashboard friendObjs={this.state.friends}  />
+      
+
     
         </Switch>
         

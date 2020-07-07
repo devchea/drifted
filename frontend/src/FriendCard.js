@@ -2,17 +2,18 @@ import React, {Component} from 'react'
 
 class FriendCard extends Component{
 
-    render(){
-        let displayFriend = this.props.friend
-        return(<div>
-            <h2>{displayFriend.name}</h2>
-            <h4>{displayFriend.phone}</h4>
-            <h4>{displayFriend.email}</h4>
-            <h4>Keep in touch every: </h4>
-            </div>
-        )
-    }
-
+  render(){
+    let displayFriend = this.props
+    return (
+      <div>
+        <tr>
+          {displayFriend.name}
+          {displayFriend.phone}
+          {displayFriend.email}
+          {/* <td>Next Appointment: {displayFriend.appointment.next_appointment}</td> */}
+        </tr>
+      </div>
+    );
+  };
 }
-
 export default FriendCard

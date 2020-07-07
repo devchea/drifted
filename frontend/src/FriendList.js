@@ -1,20 +1,28 @@
 import React from "react"
 import FriendCard from "./FriendCard"
 
-function FriendList(props){
+// function FriendList(props){
 
-    return(
-        <div> {
-            props.friendObjs.map(friend => {
-                return (
-                <div> 
-                    {friend.name, friend.phone, friend.email, friend.appointment.next_appointment}
-                </div>
-                )
-            }
-            )
-         }</div>
-    )
-}
-
+const FriendList = (props) => {
+ 
+    console.log('friendlist props:',props)
+    return (
+        <table className="ui celled striped padded table">
+          <tbody>
+            <tr>
+              <th>
+                <h3 className="ui center aligned header">Friends</h3>
+            </th>
+            </tr>
+            <tr>
+            {props.friendObjs.map(friend => {
+              return (
+              <FriendCard {...friend}/>
+              )
+            })}
+            </tr>
+          </tbody>
+        </table>
+      );
+    };
 export default FriendList
