@@ -6,6 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
+import Button from '@material-ui/core/Button';
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -48,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 export default function CustomizedSelects() {
   const classes = useStyles();
   const [name, setName] = React.useState('');
@@ -58,12 +60,41 @@ export default function CustomizedSelects() {
   // const handleChange = (event) => {
   //   setName(event.target.value);
   // };
+
+  const handleSubmit = (name, phone, email, recInt, recUnit) => {
+    // console.log('Name:', name)
+    // console.log('Phone:', phone)
+    // console.log('Email:', email)
+    // console.log('recint:', recInt)
+    // console.log('recunit:', recUnit)
+    fetch('http://localhost:3000/api/v1/friends',
+      {method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        phone: phone,
+        email: email,
+        recurrence_integer: recInt,
+        recurrence_unit: recUnit
+      }
+      )}
+    )
+      .then(res => res.json())
+      .then(json => {
+        console.log(json)
+
+      })
+  }
+
   return (
-    console.log('Name:', name),
-    console.log('Phone:', phone),
-    console.log('Email:', email),
-    console.log('recint:', recInt),
-    console.log('recunit:', recUnit),
+    // console.log('Name:', name),
+    // console.log('Phone:', phone),
+    // console.log('Email:', email),
+    // console.log('recint:', recInt),
+    // console.log('recunit:', recUnit),
 
 
     <div>
@@ -101,7 +132,7 @@ export default function CustomizedSelects() {
           <option>Month</option>
         </NativeSelect>
       </FormControl>
-
+      <Button color="primary" onClick={() => handleSubmit(name, phone, email, recInt, recUnit)}>Add Friend</Button>
     </div>
   );
 }

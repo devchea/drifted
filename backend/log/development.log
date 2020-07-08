@@ -7990,3 +7990,1382 @@ Processing by Api::V1::AuthController#create as */*
 Completed 200 OK in 265ms (Views: 4.3ms | ActiveRecord: 9.1ms)
 
 
+Started POST "/api/v1/login" for ::1 at 2020-07-07 11:47:08 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.29ms)
+Completed 200 OK in 283ms (Views: 13.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-07 12:05:18 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:05:26 -0700
+Processing by Api::V1::FriendsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:14:in `logged_in?'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:07:01 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 279ms (Views: 0.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:07:03 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.36ms)
+Completed 200 OK in 45ms (Views: 15.7ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:07:09 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.23ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:07:38 -0700
+Processing by Api::V1::FriendsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:14:in `logged_in?'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:09:17 -0700
+Processing by Api::V1::FriendsController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :logged_in? rendered or redirected
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friends" for ::1 at 2020-07-07 12:09:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/friends"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:10:40 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.49ms)
+Completed 200 OK in 37ms (Views: 24.5ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:26:38 -0700
+  
+ArgumentError (Before process_action callback :logged_in? has not been defined):
+  
+app/controllers/api/v1/auth_controller.rb:4:in `<class:AuthController>'
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:26:42 -0700
+  
+ArgumentError (Before process_action callback :logged_in? has not been defined):
+  
+app/controllers/api/v1/auth_controller.rb:4:in `<class:AuthController>'
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:27:11 -0700
+  
+ArgumentError (Before process_action callback :logged_in? has not been defined):
+  
+app/controllers/api/v1/auth_controller.rb:4:in `<class:AuthController>'
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:27:38 -0700
+  
+ArgumentError (Before process_action callback :logged_in? has not been defined):
+  
+app/controllers/api/v1/auth_controller.rb:4:in `<class:AuthController>'
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:28:03 -0700
+  
+ArgumentError (Before process_action callback :logged_in? has not been defined):
+  
+app/controllers/api/v1/auth_controller.rb:4:in `<class:AuthController>'
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:28:05 -0700
+  
+ArgumentError (Before process_action callback :logged_in? has not been defined):
+  
+app/controllers/api/v1/auth_controller.rb:4:in `<class:AuthController>'
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:28:29 -0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ArgumentError (Before process_action callback :logged_in? has not been defined):
+  
+app/controllers/api/v1/auth_controller.rb:4:in `<class:AuthController>'
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:28:59 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+Completed 500 Internal Server Error in 415ms (ActiveRecord: 12.5ms)
+
+
+  
+NoMethodError (undefined method `encode_token' for #<Api::V1::AuthController:0x00007ff45624f930>):
+  
+app/controllers/api/v1/auth_controller.rb:11:in `create'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:29:40 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+Completed 500 Internal Server Error in 391ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `encode_token' for #<Api::V1::AuthController:0x00007ff455c75618>):
+  
+app/controllers/api/v1/auth_controller.rb:11:in `create'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:29:48 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 423ms (Views: 13.2ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:30:03 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 408ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:30:11 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `error' for #<Api::V1::FriendsController:0x00007ff4570ed230>):
+  
+app/controllers/application_controller.rb:22:in `logged_in?'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:31:20 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 371ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:31:27 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `error' for #<Api::V1::FriendsController:0x00007ff456435380>):
+  
+app/controllers/application_controller.rb:22:in `logged_in?'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:33:10 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `error' for #<Api::V1::FriendsController:0x00007ff45893c980>):
+  
+app/controllers/application_controller.rb:22:in `logged_in?'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:33:10 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+Completed 500 Internal Server Error in 451ms (ActiveRecord: 0.7ms)
+
+
+  
+NameError (undefined local variable or method `error' for #<Api::V1::FriendsController:0x00007ff4580b0708>):
+  
+app/controllers/application_controller.rb:22:in `logged_in?'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:33:29 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 309ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:38:03 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 263ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:38:11 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `error' for #<Api::V1::FriendsController:0x00007ff45643f7e0>):
+  
+app/controllers/application_controller.rb:22:in `logged_in?'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:40:49 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 286ms (Views: 4.4ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:40:58 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+  [1m[36mFriend Load (1.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.37ms)
+Completed 200 OK in 41ms (Views: 21.9ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:43:04 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 305ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:43:07 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:18
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.22ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:46:01 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 436ms (Views: 6.0ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 12:46:03 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.8ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.4ms)
+Completed 200 OK in 36ms (Views: 23.0ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 12:50:59 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 686ms (Views: 9.1ms | ActiveRecord: 15.0ms)
+
+
+Started PATCH "/api/v1/friends" for ::1 at 2020-07-07 13:00:09 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/api/v1/friends"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:00:12 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (2.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.36ms)
+Completed 200 OK in 76ms (Views: 35.2ms | ActiveRecord: 32.0ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 13:01:10 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::FriendsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:03:12 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.27ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 13:06:37 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::FriendsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:06:43 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.35ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:08:14 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.33ms)
+Completed 200 OK in 21ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:08:28 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.31ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:15:15 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (1.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.42ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 13:18:22 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 244ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:18:24 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.19ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 13:18:32 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::FriendsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:22:17 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.25ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:22:30 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.36ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 13:30:41 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 275ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:04 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.8ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.19ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:11 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.2ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:11 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.7ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.33ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:18 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.21ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:19 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.7ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.34ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:19 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.33ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:20 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.21ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:31 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.39ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:31 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.28ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:48:32 -0700
+Processing by Api::V1::FriendsController#index as */*
+  [1m[36mFriend Load (1.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.35ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 13:56:05 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+Completed 200 OK in 458ms (Views: 1.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 13:56:14 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for Api::V1::FriendsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 13:56:26 -0700
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (2.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 1, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-06 19:41:39", updated_at: "2020-07-06 19:41:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.6ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 14:18:01 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 717ms (Views: 11.4ms | ActiveRecord: 30.7ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 14:18:09 -0700
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Richard Chea", "phone"=>"9092740113", "email"=>"rchea817@gmail.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Day", "friend"=>{"name"=>"Richard Chea", "phone"=>"9092740113", "email"=>"rchea817@gmail.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Day"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:13
+  [1m[36mFriend Create (11.4ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Richard Chea"], ["phone", "9092740113"], ["email", "rchea817@gmail.com"], ["recurrence_integer", 1], ["recurrence_unit", "Day"], ["created_at", "2020-07-07 21:18:09.362623"], ["updated_at", "2020-07-07 21:18:09.362623"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:13
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:13
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Friend (2.4ms)
+Completed 200 OK in 156ms (Views: 32.2ms | ActiveRecord: 28.9ms)
+
+
+  [1m[36mFriend Load (0.8ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for ::1 at 2020-07-07 14:50:03 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 540ms (Views: 7.3ms | ActiveRecord: 23.5ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 14:50:21 -0700
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Richard", "phone"=>"123123213", "email"=>"fsakfl;ksdaf@faslkas.com", "recurrence_integer"=>"3", "recurrence_unit"=>"Day", "friend"=>{"name"=>"Richard", "phone"=>"123123213", "email"=>"fsakfl;ksdaf@faslkas.com", "recurrence_integer"=>"3", "recurrence_unit"=>"Day"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[36mFriend Create (1.4ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Richard"], ["phone", "123123213"], ["email", "fsakfl;ksdaf@faslkas.com"], ["recurrence_integer", 3], ["recurrence_unit", "Day"], ["created_at", "2020-07-07 21:50:21.492780"], ["updated_at", "2020-07-07 21:50:21.492780"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+Completed 204 No Content in 28ms (ActiveRecord: 13.6ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 14:51:06 -0700
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Richard Chea", "phone"=>"9092713111", "email"=>"rchea81721312312@gmail.com", "recurrence_integer"=>"4", "recurrence_unit"=>"Week", "friend"=>{"name"=>"Richard Chea", "phone"=>"9092713111", "email"=>"rchea81721312312@gmail.com", "recurrence_integer"=>"4", "recurrence_unit"=>"Week"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[36mFriend Create (0.5ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Richard Chea"], ["phone", "9092713111"], ["email", "rchea81721312312@gmail.com"], ["recurrence_integer", 4], ["recurrence_unit", "Week"], ["created_at", "2020-07-07 21:51:06.533179"], ["updated_at", "2020-07-07 21:51:06.533179"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+Completed 204 No Content in 9ms (ActiveRecord: 6.5ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 14:52:55 -0700
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Richard Chea312312", "phone"=>"90927401132312312", "email"=>"rchea817123123@gmail.com", "recurrence_integer"=>"6", "recurrence_unit"=>"Week", "friend"=>{"name"=>"Richard Chea312312", "phone"=>"90927401132312312", "email"=>"rchea817123123@gmail.com", "recurrence_integer"=>"6", "recurrence_unit"=>"Week"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[36mFriend Create (0.7ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Richard Chea312312"], ["phone", "90927401132312312"], ["email", "rchea817123123@gmail.com"], ["recurrence_integer", 6], ["recurrence_unit", "Week"], ["created_at", "2020-07-07 21:52:56.088180"], ["updated_at", "2020-07-07 21:52:56.088180"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Friend (0.53ms)
+Completed 200 OK in 44ms (Views: 17.4ms | ActiveRecord: 13.1ms)
+
+
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 14:54:45 -0700
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Phyllis", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month", "friend"=>{"name"=>"Phyllis", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[36mFriend Create (0.4ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Phyllis"], ["phone", "123456780"], ["email", "phyllis@phyllis.com"], ["recurrence_integer", 1], ["recurrence_unit", "Month"], ["created_at", "2020-07-07 21:54:45.411590"], ["updated_at", "2020-07-07 21:54:45.411590"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Friend (0.28ms)
+Completed 500 Internal Server Error in 221ms (Views: 12.9ms | ActiveRecord: 10.8ms)
+
+
+  
+NameError (undefined local variable or method `console' for #<Api::V1::FriendsController:0x00007ff454d10010>):
+  
+app/controllers/api/v1/friends_controller.rb:12:in `create'
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 14:55:25 -0700
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Phyllis", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month", "friend"=>{"name"=>"Phyllis", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[36mFriend Create (0.7ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Phyllis"], ["phone", "123456780"], ["email", "phyllis@phyllis.com"], ["recurrence_integer", 1], ["recurrence_unit", "Month"], ["created_at", "2020-07-07 21:55:25.754666"], ["updated_at", "2020-07-07 21:55:25.754666"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Friend (0.29ms)
+Completed 200 OK in 46ms (Views: 29.4ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 14:56:36 -0700
+  
+SyntaxError (/Users/richardchea/development/code/drifted/backend/app/controllers/api/v1/friends_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting end
+       puts 'fp' friend_params
+                 ^~~~~~~~~~~~~):
+  
+app/controllers/api/v1/friends_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting end
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 14:58:52 -0700
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Phyllis2", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month", "friend"=>{"name"=>"Phyllis2", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[36mFriend Create (0.7ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Phyllis2"], ["phone", "123456780"], ["email", "phyllis@phyllis.com"], ["recurrence_integer", 1], ["recurrence_unit", "Month"], ["created_at", "2020-07-07 21:58:53.057708"], ["updated_at", "2020-07-07 21:58:53.057708"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Friend (0.33ms)
+  [1m[36mFriend Load (0.7ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFriend Destroy (2.7ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFriend Destroy (0.5ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFriend Destroy (0.6ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFriend Destroy (0.5ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFriend Destroy (1.1ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFriend Destroy (0.6ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFriend Destroy (0.8ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFriend Destroy (0.9ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 123268ms (Views: 11.6ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 15:00:56 -0700
+  
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 15:00:56 -0700
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/friends_controller.rb:23:in `create'
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Phyllis2", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month", "friend"=>{"name"=>"Phyllis2", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month"}}
+  [1m[35m (356.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[36mFriend Create (7.2ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Phyllis2"], ["phone", "123456780"], ["email", "phyllis@phyllis.com"], ["recurrence_integer", 1], ["recurrence_unit", "Month"], ["created_at", "2020-07-07 22:00:58.328842"], ["updated_at", "2020-07-07 22:00:58.328842"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[35m (311.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Friend (11.39ms)
+Completed 500 Internal Server Error in 4302ms (Views: 237.6ms | ActiveRecord: 675.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/friends_controller.rb:23:in `create'
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Phyllis2", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month", "friend"=>{"name"=>"Phyllis2", "phone"=>"123456780", "email"=>"phyllis@phyllis.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Month"}}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[36mFriend Create (2.0ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Phyllis2"], ["phone", "123456780"], ["email", "phyllis@phyllis.com"], ["recurrence_integer", 1], ["recurrence_unit", "Month"], ["created_at", "2020-07-07 22:01:06.029353"], ["updated_at", "2020-07-07 22:01:06.029353"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Friend (5.4ms)
+Completed 500 Internal Server Error in 429ms (Views: 178.7ms | ActiveRecord: 44.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/friends_controller.rb:23:in `create'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 15:01:25 -0700
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 682ms (Views: 12.4ms | ActiveRecord: 21.3ms)
+
+
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[36mFriend Load (0.7ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFriend Destroy (0.4ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mFriend Destroy (0.3ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[36mAppointment Load (1.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mAppointment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "appointments" WHERE "appointments"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "temp"], ["password_digest", "$2a$12$R7pNQt9po95hVk4/s74OTeWOm98iPqj1q/YK18nxQCSrB57c7WVOm"], ["created_at", "2020-07-07 22:02:55.632422"], ["updated_at", "2020-07-07 22:02:55.632422"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mFriend Create (0.5ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Krysta Sample"], ["phone", "555-867-5309"], ["email", "sameple@live.com"], ["recurrence_integer", 5], ["recurrence_unit", "days"], ["created_at", "2020-07-07 22:02:55.636038"], ["updated_at", "2020-07-07 22:02:55.636038"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mAppointment Create (0.4ms)[0m  [1m[32mINSERT INTO "appointments" ("user_id", "friend_id", "next_appointment", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["friend_id", 11], ["next_appointment", "2020-07-13"], ["created_at", "2020-07-07 22:02:55.638516"], ["updated_at", "2020-07-07 22:02:55.638516"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 15:22:53 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::FriendsController#index as HTML
+  [1m[36mFriend Load (0.7ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 11, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-07 22:02:55", updated_at: "2020-07-07 22:02:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.4ms)
+Completed 200 OK in 52ms (Views: 32.3ms | ActiveRecord: 8.8ms)
+
+
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/login" for ::1 at 2020-07-07 15:23:45 -0700
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 289ms (Views: 5.7ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 15:33:27 -0700
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::AuthController#create as */*
+  Parameters: {"username"=>"temp", "password"=>"[FILTERED]", "auth"=>{"username"=>"temp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "temp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/auth_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (9.88ms)
+Completed 200 OK in 988ms (Views: 89.1ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/api/v1/friends?name=Richard" for ::1 at 2020-07-07 15:41:53 -0700
+Processing by Api::V1::FriendsController#index as */*
+  Parameters: {"name"=>"Richard"}
+  [1m[36mFriend Load (1.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 11, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-07 22:02:55", updated_at: "2020-07-07 22:02:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.68ms)
+Completed 200 OK in 74ms (Views: 38.2ms | ActiveRecord: 23.5ms)
+
+
+Started GET "/api/v1/friends?name=Richard" for ::1 at 2020-07-07 15:42:02 -0700
+Processing by Api::V1::FriendsController#index as */*
+  Parameters: {"name"=>"Richard"}
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 11, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-07 22:02:55", updated_at: "2020-07-07 22:02:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.55ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/friends?name=Richard&phone=1111111111" for ::1 at 2020-07-07 15:42:20 -0700
+Processing by Api::V1::FriendsController#index as */*
+  Parameters: {"name"=>"Richard", "phone"=>"1111111111"}
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 11, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-07 22:02:55", updated_at: "2020-07-07 22:02:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.41ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/friends?name=Richard&phone=1111111111" for ::1 at 2020-07-07 15:42:29 -0700
+Processing by Api::V1::FriendsController#index as */*
+  Parameters: {"name"=>"Richard", "phone"=>"1111111111"}
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 11, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-07 22:02:55", updated_at: "2020-07-07 22:02:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.39ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/friends?name=Richard&phone=1111111111" for ::1 at 2020-07-07 15:42:30 -0700
+Processing by Api::V1::FriendsController#index as */*
+  Parameters: {"name"=>"Richard", "phone"=>"1111111111"}
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 11, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-07 22:02:55", updated_at: "2020-07-07 22:02:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.21ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/friends?name=Richard&phone=1111111111" for ::1 at 2020-07-07 15:42:31 -0700
+Processing by Api::V1::FriendsController#index as */*
+  Parameters: {"name"=>"Richard", "phone"=>"1111111111"}
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:6
+No serializer found for resource: #<Friend id: 11, name: "Krysta Sample", phone: "555-867-5309", email: "sameple@live.com", recurrence_integer: 5, recurrence_unit: "days", created_at: "2020-07-07 22:02:55", updated_at: "2020-07-07 22:02:55">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Friend::ActiveRecord_Relation (0.25ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/v1/login" for ::1 at 2020-07-07 16:40:13 -0700
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 16:40:15 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/friends_controller.rb:2:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 16:40:29 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 16:40:32 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 16:40:44 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/friends_controller.rb:2:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 16:41:00 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 16:41:02 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 16:43:01 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started GET "/api/v1/login" for ::1 at 2020-07-07 16:43:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2020-07-07 16:43:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 16:43:50 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/friends_controller.rb:2:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 21:53:27 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 21:53:29 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 21:53:37 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started GET "/api/v1/login" for ::1 at 2020-07-07 21:58:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/login"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:03:24 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:03:28 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:03:36 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started GET "/api/v1/friends" for ::1 at 2020-07-07 22:03:49 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/friends_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:04:02 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:04:04 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:04:05 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:04:05 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:04:06 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:04:14 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/login" for ::1 at 2020-07-07 22:04:14 -0700
+  
+ActionController::RoutingError (uninitialized constant ApplicationController):
+  
+app/controllers/api/v1/auth_controller.rb:1:in `<main>'
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 22:23:48 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"", "phone"=>"", "email"=>"", "recurrence_integer"=>"", "recurrence_unit"=>"", "friend"=>{"name"=>"", "phone"=>"", "email"=>"", "recurrence_integer"=>"", "recurrence_unit"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[36mFriend Create (0.6ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["phone", ""], ["email", ""], ["recurrence_unit", ""], ["created_at", "2020-07-08 05:23:49.097937"], ["updated_at", "2020-07-08 05:23:49.097937"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 22:24:51 -0700
+Completed 500 Internal Server Error in 62074ms (ActiveRecord: 7.4ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/friends_controller.rb:11:in `create'
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 22:24:52 -0700
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Richard Chea", "phone"=>"9092740113", "email"=>"rchea817@gmail.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Day", "friend"=>{"name"=>"Richard Chea", "phone"=>"9092740113", "email"=>"rchea817@gmail.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Day"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+Processing by Api::V1::FriendsController#create as JSON
+  [1m[36mFriend Create (24.5ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Richard Chea"], ["phone", "9092740113"], ["email", "rchea817@gmail.com"], ["recurrence_integer", 1], ["recurrence_unit", "Day"], ["created_at", "2020-07-08 05:24:52.646770"], ["updated_at", "2020-07-08 05:24:52.646770"]]
+  Parameters: {"name"=>"Richard Chea", "phone"=>"9092740113", "email"=>"rchea817@gmail.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Day", "friend"=>{"name"=>"Richard Chea", "phone"=>"9092740113", "email"=>"rchea817@gmail.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Day"}}
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[35m (7.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[36mFriend Create (3.7ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Richard Chea"], ["phone", "9092740113"], ["email", "rchea817@gmail.com"], ["recurrence_integer", 1], ["recurrence_unit", "Day"], ["created_at", "2020-07-08 05:24:52.728525"], ["updated_at", "2020-07-08 05:24:52.728525"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+Completed 500 Internal Server Error in 2599ms (ActiveRecord: 52.1ms)
+
+
+  
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+SystemExit (exit):
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/friends_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 3754ms (ActiveRecord: 29.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/friends_controller.rb:11:in `create'
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/friends" for ::1 at 2020-07-07 22:25:39 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/richardchea/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::FriendsController#create as JSON
+  Parameters: {"name"=>"Richard Chea", "phone"=>"9092740113", "email"=>"rchea817@gmail.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Day", "friend"=>{"name"=>"Richard Chea", "phone"=>"9092740113", "email"=>"rchea817@gmail.com", "recurrence_integer"=>"1", "recurrence_unit"=>"Day"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[36mFriend Create (0.7ms)[0m  [1m[32mINSERT INTO "friends" ("name", "phone", "email", "recurrence_integer", "recurrence_unit", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Richard Chea"], ["phone", "9092740113"], ["email", "rchea817@gmail.com"], ["recurrence_integer", 1], ["recurrence_unit", "Day"], ["created_at", "2020-07-08 05:25:39.203655"], ["updated_at", "2020-07-08 05:25:39.203655"]]
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/friends_controller.rb:9
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT  "friends".* FROM "friends" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Friend (2.86ms)
+Completed 200 OK in 111141ms (Views: 220.3ms | ActiveRecord: 13.8ms)
+
+

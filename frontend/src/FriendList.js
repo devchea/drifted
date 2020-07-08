@@ -5,7 +5,7 @@ import FriendCard from "./FriendCard"
 
 const FriendList = (props) => {
  
-    console.log('friendlist props:',props)
+    // console.log('friendlist props:',props)
     return (
         <table className="ui celled striped padded table">
           <tbody>
@@ -17,7 +17,7 @@ const FriendList = (props) => {
             <tr>
             {props.friendObjs.map(friend => {
               return (
-              <FriendCard {...friend}/>
+              <FriendCard {...friend} />
               )
             })}
             </tr>

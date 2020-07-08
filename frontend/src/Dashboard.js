@@ -5,7 +5,7 @@ import AddFriendForm from './AddFriendForm'
 class Dashboard extends Component {
  
   render(){
-    console.log("dashboard friendObjs:", this.props.friendObjs)
+    // console.log("dashboard friendObjs:", this.props.friendObjs)
     return(
       <div>
         <AddFriendForm/>
