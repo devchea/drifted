@@ -42,6 +42,10 @@ class App extends React.Component{
     })
   }
 
+  componentDidMount(){
+    this.getFriends()
+  }
+  
   getFriends = () => {
       fetch("http://localhost:3000/api/v1/friends",
       {

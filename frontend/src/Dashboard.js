@@ -4,21 +4,6 @@ import AddFriendForm from './AddFriendForm'
 import EditFriend from './EditFriend'
 
 class Dashboard extends Component {
-  state = {
-    showFriend: false,
-    showFriendID: null
-  }
-
-
-  handleShowFriend = () => {
-    this.state.showFriend?
-    this.setState({
-      showFriend: false
-    })
-    : this.setState({
-      showFriend: true
-    })
-  }
 
   render(){
     // console.log("dashboard friendObjs:", this.props.friendObjs)
@@ -30,7 +15,8 @@ class Dashboard extends Component {
         <FriendList
           passFriend={this.props.passFriends}
           friendObjs={this.props.friendObjs}
-          handleShowfriend={this.handleShowFriend}
+          // handleShowfriend={this.handleShowFriend}
+          // showFriendObj={this.state.showFriendObj}
         />
         {/* <div style={{float: "right"}}> */}
 
