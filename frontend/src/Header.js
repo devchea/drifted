@@ -18,7 +18,7 @@ function Header(){
             <div className="item">
             <h2 className="ui header">
                 <div className="content">
-                    <Link to="/signup" style={{color: "black"}}>SignUp</Link>
+                    <Link to="/signup" style={{color: "black"}}>Sign Up</Link>
                 </div>
             </h2>
             </div>
