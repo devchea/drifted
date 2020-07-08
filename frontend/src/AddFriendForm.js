@@ -131,8 +131,13 @@ export default function CustomizedSelects() {
           <option>Week</option>
           <option>Month</option>
         </NativeSelect>
+
       </FormControl>
-      <Button color="primary" onClick={() => handleSubmit(name, phone, email, recInt, recUnit)}>Add Friend</Button>
+
+      <div> 
+      <Button className="ui teal button" style={{ margin: "auto", width: "50%"}} color="primary" onClick={() => handleSubmit(name, phone, email, recInt, recUnit)}>Add Friend</Button>
+
+        </div>
     </div>
   );
 }

@@ -5,13 +5,10 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from './Header'
 import FriendList from './FriendList'
-// import FriendForm from './FriendForm'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Login from './Login'
 import SignUp from './SignUp'
 import Dashboard from './Dashboard';
-
-
 
 class App extends React.Component{
 
@@ -21,10 +18,14 @@ class App extends React.Component{
       testNew: "testnew",
       test: "test",
       form: false,
-      friends: []
+      friends: [],
+      editFriend: null
     }
   }
 
+  editFriend = (e) => {
+    this.state.editFriend = e.target.value
+  }
   addFriend = (e) => {
     e.preventDefault()
   
@@ -58,34 +59,32 @@ class App extends React.Component{
   }
 
   render(){
-    return (
-   
-      <BrowserRouter>
-      <div>
-        < CssBaseline />
-        <Header/>
-        <Button onClick={this.getFriends}>Show Friends</Button>
-        <Switch>
-
-        <Route path="/login" component={(routerProps)=><Login {...routerProps} />} />
-
-        <Route path="/signup" component={SignUp} />
-        {/* <Route path="/dashboard" component={Dashboard} /> */}
-
-
-
-        {/* <Route path="/paintings/new" render = {(routeProps) =><AddForm {...routeProps} add={this.addContact} /> } /> */}
-
-        {/* <Route path="/friends" render={() => <FriendList friendObjs={this.state.friends} />}/> */}
-        <Dashboard friendObjs={this.state.friends}  />
-      
-
     
-        </Switch>
-        
+    // const token = localStorage.token
+    // console.log(token);
+    return (
 
-    </div>
-    </BrowserRouter>
+      <BrowserRouter>
+
+        <div>
+
+          <Header/>
+
+          <Switch>
+
+          <Route path="/login" component={(routerProps)=><Login {...routerProps} />} />
+
+          <Route path="/signup" component={SignUp} />
+          {/* <Route path="/dashboard" component={Dashboard} /> */}
+          {/* <Route path="/paintings/new" render = {(routeProps) =><AddForm {...routeProps} add={this.addContact} /> } /> */}
+          {/* <Route path="/friends" render={() => <FriendList friendObjs={this.state.friends} />}/> */}
+
+          if(localStorage.token !== 'undefined') {
+            <Dashboard passEdit={this.editFriend} passFriends={this.getFriends} friendObjs={this.state.friends}  />
+          }
+          </Switch>
+      </div>
+      </BrowserRouter>
   )};
 }
 
