@@ -17,10 +17,6 @@ import { Redirect } from 'react-router';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 
-
-
-
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -41,17 +37,26 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-
-
 export default function SignIn(props) {
   // console.log(props)
   const classes = useStyles();
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [errors, setError] = useState("")
+  // const [friends, setFriends] = useState("")
 
-
+  // const getFriends = () => {
+  //   fetch("http://localhost:3000/api/v1/friends", {
+  //       method: "GET",
+  //       headers: {
+  //         Authorization: `Bearer ${localStorage.token}`
+  //       }
+  //     })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setFriends(friends)
+  //     })
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -74,11 +79,14 @@ export default function SignIn(props) {
         // console.log('lstoken:', localStorage.token)
         if (localStorage.token !== 'undefined'){
           props.history.push('dashboard')
+          // getFriends()
           // 'route to dashboard here'
           // <Redirect to='/Dashboard'/>
         }
       })
   }
+
+
 
   return (
     <Container component="main" maxWidth="xs">
