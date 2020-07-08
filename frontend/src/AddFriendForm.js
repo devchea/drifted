@@ -118,7 +118,6 @@ export default function CustomizedSelects() {
         <BootstrapInput id="demo-customized-textbox" type='number' onChange={(e) => setRecInt(e.target.value)}/>
       </FormControl>
 
-
       <FormControl className={classes.margin}>
         <InputLabel htmlFor="demo-customized-select-native">Unit</InputLabel>
         <NativeSelect
@@ -127,9 +126,9 @@ export default function CustomizedSelects() {
           input={<BootstrapInput />}
         >
           <option aria-label="None" value="" />
-          <option>Day</option>
-          <option>Week</option>
-          <option>Month</option>
+          <option>Day(s)</option>
+          <option>Week(s)</option>
+          <option>Month(s)</option>
         </NativeSelect>
 
       </FormControl>

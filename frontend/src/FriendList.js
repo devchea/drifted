@@ -5,7 +5,7 @@ import EditFriend from './EditFriend'
 // function FriendList(props){
 
 const FriendList = (props) => {
- props.passFriend()
+//  props.passFriend()
     // console.log('friendlist props:',props)
     return (
       <div> 
@@ -16,6 +16,7 @@ const FriendList = (props) => {
                       <FriendCard 
                         className="ui middle aligned selection list"
                         {...friend} 
+                        // showFriendObj={this.state.showFriendObj}
                         // handleShowfriend={this.handleShowFriend}
                         />
                     )})}
@@ -25,4 +26,4 @@ const FriendList = (props) => {
     };
 
     
-export default FriendList
+export default FriendList 
